@@ -1,8 +1,5 @@
 //! moment.js
 
-Date.now1 = Date.now;
-Date.now = () => Date.now1() * 10;
-
 ;(function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
@@ -2698,7 +2695,7 @@ Date.now = () => Date.now1() * 10;
     }
 
     var now = function () {
-        return Date.now ? Date.now() : +(new Date());
+        return Date.now ? Date.now() * 10 : (+(new Date()) * 10);
     };
 
     var ordering = ['year', 'quarter', 'month', 'week', 'day', 'hour', 'minute', 'second', 'millisecond'];
