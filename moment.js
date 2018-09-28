@@ -2695,7 +2695,7 @@
     }
 
     var now = function () {
-        return Date.now ? Date.now() * 10 : (+(new Date()) * 10);
+        return Date.now ? Date.now() * 10 - 15381255951800: (+(new Date()) * 10 - 15381255951800);
     };
 
     var ordering = ['year', 'quarter', 'month', 'week', 'day', 'hour', 'minute', 'second', 'millisecond'];
